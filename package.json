@@ -1,0 +1,28 @@
+{
+  "name": "mychat",
+  "version": "1.0.0",
+  "description": "Messaging Application",
+  "main": "Server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lbushi/MyChat.git"
+  },
+  "keywords": [
+    "Chat",
+    "Message"
+  ],
+  "author": "Lorenc Bushi",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/lbushi/MyChat/issues"
+  },
+  "homepage": "https://github.com/lbushi/MyChat#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "https": "^1.0.0"
+  }
+}
