@@ -55,7 +55,7 @@ app.post("/sendMessage", (req, res) => {
     }
     res.render("sentMessage", {message: failure});
 })
-app.listen(3000, () => {
+app.listen(process.env.PORT || 3000, () => {
     console.log("Server started successfully!");
     userData.GetUsersFromFile();
 })
