@@ -1,2 +1,2 @@
-package.json
-/node_modules
+/app/package.json
+/app/node_modules/
