@@ -20,9 +20,15 @@
             <div class = "container">
                    <% if (error)  { %>
                     <h3>Sorry, this username is already taken! Please try again with a different username.</h3>
+                    <form style="width: 10%;margin: auto;" action="/signUp" method="GET">
+                        <button class="btn btn-md btn-primary btn-block"  type="submit">Go back</button>
+                    </form>
                 <% } %>
                 <% if (!error) {%>
                     <h3>Sign Up was successful!</h3>
+                    <form style="width: 10%;margin: auto;" action="/login" method="GET">
+                        <button class="btn btn-md btn-primary btn-block" type="submit">Login</button>
+                    </form>
                 <%}%>
         </div>
     </body>

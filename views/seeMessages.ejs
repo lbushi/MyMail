@@ -10,13 +10,16 @@
         <title>Inbox</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <h1 style="text-align: center;">Inbox of <%= user.name%></h1>
+        <form style="width: 10%;margin: auto;" action="/sendMessage" method="GET">
+            <button class="btn btn-md btn-primary btn-block"  type="submit">Send a message</button>
+        </form>
         <% for (let i = 0; i < user.messages.length; ++i) { %>
             <h3><%=user.messages[i].sender%></h3>
             <p><%=user.messages[i].content%></p>

@@ -8,6 +8,9 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 var loggedInUser = {};
+app.get("/", (req, res) => {
+    res.redirect("/login");
+})
 app.get("/login", (req, res) => {
     res.sendFile(__dirname + "/public/login.html");
 })
