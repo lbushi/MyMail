@@ -10,6 +10,7 @@
     <title>Inbox</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="inbox.css"/>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
@@ -24,6 +25,12 @@
         <a href="#">upgrade your browser</a> to improve your experience.
       </p>
     <![endif]-->
+    <div class="container" style="text-align: right;">
+        <p style="margin:auto;"> Logged In: <%=user.name%></p>
+        <form action="/deleteSession">
+            <button class="btn btn-md btn-primary"  type="submit">Log Out</a>
+        </form>
+    </div>
     <h1 style="text-align: center">Inbox of <%= user.name%></h1>
     <form style="width: 10%; margin: auto" action="/sendMessage" method="GET">
       <button class="btn btn-md btn-primary btn-block" type="submit">
@@ -40,12 +47,12 @@
           </thead>
       <tbody>
         <% for (let i = 0; i < user.messages.length; ++i) { %>
-        <tr>
-            <td><%=i + 1%></td>
-          <td>
+        <tr >
+            <td style="text-align: center;"><%=i + 1%></td>
+          <td style="text-align: center;">
             <h3><%=user.messages[i].sender%></h3>
           </td>
-          <td>
+          <td style="text-align: center;">
             <p><%=user.messages[i].content%></p>
           </td>
           <% } %>

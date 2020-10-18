@@ -37,11 +37,19 @@ function populateList(data_array) {
         userList.push(new User(data_array[i].name, data_array[i].password, data_array[i].messages));
     }
 }
+function getUser(username) {
+    for (let i = 0; i < userList.length; ++i) {
+        if (userList[i].name === username) {
+            return userList[i];
+        }
+    }
+}
 module.exports = {
     userList: userList,
     User: User,
     Message: Message,
     addUser: addUser, 
     authUser: authUser,
-    populateList: populateList
+    populateList: populateList,
+    getUser: getUser
 }
