@@ -5,10 +5,6 @@ var { Message } = require("./user");
 var { getUser } = require("./user");
 var userData = require("./userData");
 var cookieSession = require("cookie-session");
-var checkSession = function (req) {
-    if (req.session && req.session.loggedInUser) {
-    }
-}
 var app = express();
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));
